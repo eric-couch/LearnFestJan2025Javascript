@@ -13,10 +13,12 @@ document.addEventListener("DOMContentLoaded", event => {
             console.log(`Movies: ${movies}`);
             const movieList = document.getElementById("favMovieList");
             movieList.innerHTML = "";
-            movies.Search.forEach(movie => {
-                console.log(`Movie: ${movie.Title}`);
-                BuildMovieCard(movie);
-            })
+            if (movies) {
+                movies.Search.forEach(movie => {
+                    console.log(`Movie: ${movie.Title}`);
+                    BuildMovieCard(movie);
+                })
+            }
         })()
     })
 });
@@ -27,8 +29,26 @@ function BuildMovieCard(movie) {
     movieCardClone = movieCard.cloneNode(true);
     movieCardClone.querySelector("#moviePoster").src = MoviePoster + imdbID;
     movieCardClone.querySelector("#cardBody").firstElementChild.innerText = `${Title} (${Year})`;
+    let favButton = movieCardClone.querySelector("#favbtn");
+    if (favButton != null) {
+        favButton.addEventListener("click", event => {
+            console.log("Fav Button was clicked");
+            AddToFavorites(movie);
+        })
+    }
     favMovieList.appendChild(movieCardClone);
     movieCardClone.style.display = "inline";
+}
+
+function AddToFavorites(movie) {
+    let jsonString = localStorage.getItem("favMovies");
+    if (jsonString === null) {
+        jsonString = '[]';
+    }
+    let favoriteMovies = JSON.parse(jsonString);
+    favoriteMovies.push(movie);
+    localStorage.setItem("favMovies", JSON.stringify(favoriteMovies));
+    // add popup message letting user know movie was added
 }
 
 const getMovies = async () => { 
