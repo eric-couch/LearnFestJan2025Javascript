@@ -1,0 +1,23 @@
+.search-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    max-width: 400px;
+    margin: 20px auto;
+    gap: 10px;
+}
+.search-container input {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+}
+
+.search-container button {
+    padding: 8px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/favoritemovies.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/favoritemovies.js"></script>
+</head>
+<body>
+    <!-- two pages: movie Search page and a Favorite Movies List page -->
+     <nav class="navbar">
+        <a href="MovieSearch.html">Movie Search</a>
+        <a href="#">Favorite Movies</a>
+     </nav>
+     <div class="movie-list" id="favMovieList">
+        <!-- favorite movies will be dynamically added here (JS) -->
+         
+     </div>
+
+     <!-- prototype movie card -->
+     <div id="movieCard" class="movie-card">
+        <img src="https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_SX300.jpg" />
+        <div class="card-body" id="cardBody">
+            <h6>Interstellar (2014)</h6>
+            <p id="genre">Adventure, Drama, Sci-Fi</p>
+            <p id="plot">When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.</p>
+        </div>
+    </div>
+</body>
+</html>
