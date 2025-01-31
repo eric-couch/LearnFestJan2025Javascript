@@ -58,3 +58,13 @@
 .card-body #genre {
     font-weight: bold;
 }
+
+.btn-primary {
+    padding: 8px;
+    font-size: 0.7em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

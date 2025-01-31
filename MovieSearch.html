@@ -19,6 +19,13 @@
         <button class="btn-primary" id="searchbtn">Search</button>
      </div>
 
+     <!-- add navigation bar -->
+     <div id="searchListNav" class="search-nav">
+        <div><button id="prevbtn" class="btn-primary">Previous</button></div>
+        <div id="pages"></div>
+        <div><button id="nextbtn" class="btn-primary">Next</button></div>
+     </div>
+
      <div class="movie-list" id="favMovieList">
         <!-- favorite movies will be dynamically added here (JS) -->
          
@@ -26,7 +33,7 @@
 
      <!-- prototype movie card -->
      <div id="movieCard" class="movie-card">
-        <img id="moviePoster" src="https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_SX300.jpg" />
+        <img id="moviePoster" src="" onerror="this.onerror=null;this.src='https://placehold.co/200x300/?text=Poster Not Found'" />
         <div class="card-body" id="cardBody">
             <h6>Interstellar (2014)</h6>
             <button class="btn-primary" id="favbtn">Add To Favorites</button>
